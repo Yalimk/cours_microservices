@@ -36,6 +36,7 @@ const consumeAndTransformData = async (addedMessage, topicToReadFrom, topicToWri
   await consumer.run({
     eachMessage: async ({ message }) => {
       const topicData = message.value.toString();
+      console.log('Données contenues dans le topic 1: ', topicData);
       const messageToSend = `${topicData} ${addedMessage}`;
       await writeDataToTopic(messageToSend, topicToWriteTo);
     }
