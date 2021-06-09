@@ -2,7 +2,7 @@ import { Kafka } from 'kafkajs';
 
 const kafka = new Kafka({
   clientId: 'producer-microservice',
-  brokers: ['localhost:8888']
+  brokers: ['localhost:9092']
 });
 
 const producer = kafka.producer({

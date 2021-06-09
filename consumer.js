@@ -2,7 +2,7 @@ import { Kafka } from 'kafkajs';
 
 const kafka = new Kafka({
   clientId: 'consumer-microservice',
-  brokers: ['localhost:8888']
+  brokers: ['localhost:9092']
 });
 
 const consumer = kafka.consumer({
