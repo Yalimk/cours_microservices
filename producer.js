@@ -16,7 +16,7 @@ const writeDataToTopic = async (message, topicName) => {
   await producer.send({
     topic: topicName,
     messages: [
-      { value: message } //The value passed to 'value' has to be a string
+      { value: message } // La valeur de 'value' doit impérativement être une chaine de caractères
     ]
   });
 };
